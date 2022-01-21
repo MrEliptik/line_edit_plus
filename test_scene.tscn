@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/line_edit_+/line_edit_node.gd" type="Script" id=1]
+
+[node name="Test" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit+" type="LineEdit" parent="."]
+margin_right = 298.0
+margin_bottom = 61.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+use_regex = true
+dummy_var = null
