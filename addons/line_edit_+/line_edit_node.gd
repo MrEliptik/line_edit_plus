@@ -123,6 +123,9 @@ func compile_regex(pattern: String) -> void:
 	if err != OK:
 		print("Error compiling the RegEx: %s" %err)
 
+func run_regex() -> bool:
+	return regex.search(text) != null
+
 func on_text_changed(txt: String) -> void:
 	if !use_regex || !prevent_typing: return
 	var old_caret_pos = caret_position
