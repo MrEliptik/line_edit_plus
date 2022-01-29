@@ -10,11 +10,10 @@ __meta__ = {
 }
 
 [node name="LineEdit+" type="LineEdit" parent="."]
-margin_right = 298.0
-margin_bottom = 61.0
+margin_right = 164.0
+margin_bottom = 44.0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-use_regex = true
-dummy_var = null
+"Use Regex" = true
+"Predefined pattern" = 1
+"Prevent typing" = true
+Pattern = "[0-9]+"
