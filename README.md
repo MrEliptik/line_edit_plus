@@ -11,7 +11,16 @@ Custom node
 
 Premade Regex patterns or custom ones
 <p align="center">
-  <img src="screenshots/lineedit_inspector.png" width="200">
+  <img src="screenshots/lineedit_inspector.png" width="350">
+</p>
+
+<p align="center">
+  <img src="screenshots/node_config.gif">
+</p>
+
+Test using the email pattern
+<p align="center">
+  <img src="screenshots/test_email.gif">
 </p>
 
 ## How to use
