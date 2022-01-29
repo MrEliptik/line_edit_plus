@@ -1,19 +1,84 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://addons/line_edit_+/line_edit_node.gd" type="Script" id=1]
+[ext_resource path="res://test_scene.gd" type="Script" id=2]
 
 [node name="Test" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LineEdit+" type="LineEdit" parent="."]
-margin_right = 164.0
-margin_bottom = 44.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -325.0
+margin_top = -67.5
+margin_right = 325.0
+margin_bottom = 67.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 650.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit+" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_right = 541.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 "Use Regex" = true
-"Predefined pattern" = 1
-"Prevent typing" = true
-Pattern = "[0-9]+"
+"Predefined pattern" = 5
+"Prevent typing" = false
+Pattern = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
+
+[node name="Run" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 566.0
+margin_right = 650.0
+margin_bottom = 65.0
+text = "RUN REGEX"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 69.0
+margin_right = 650.0
+margin_bottom = 135.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 201.0
+margin_right = 295.0
+margin_bottom = 66.0
+size_flags_horizontal = 5
+size_flags_vertical = 1
+text = "REGEX RESULT:"
+align = 1
+valign = 1
+
+[node name="Result" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 299.0
+margin_right = 449.0
+margin_bottom = 66.0
+rect_min_size = Vector2( 150, 0 )
+size_flags_vertical = 1
+align = 1
+valign = 1
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Run" to="." method="_on_Run_pressed"]
