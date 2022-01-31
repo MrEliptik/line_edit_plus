@@ -16,17 +16,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -325.0
-margin_top = -67.5
-margin_right = 325.0
-margin_bottom = 67.5
+margin_left = -355.5
+margin_top = -206.5
+margin_right = 355.5
+margin_bottom = 206.5
+custom_constants/separation = 15
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 711.0
+margin_bottom = 14.0
+size_flags_horizontal = 5
+size_flags_vertical = 1
+text = "EMAIL TEST"
+align = 1
+valign = 1
+
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 650.0
-margin_bottom = 65.0
+margin_top = 29.0
+margin_right = 711.0
+margin_bottom = 99.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 25
@@ -35,8 +46,8 @@ __meta__ = {
 }
 
 [node name="LineEdit+" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
-margin_right = 541.0
-margin_bottom = 65.0
+margin_right = 602.0
+margin_bottom = 70.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
@@ -49,23 +60,23 @@ __meta__ = {
 Pattern = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
 
 [node name="Run" type="Button" parent="VBoxContainer/HBoxContainer"]
-margin_left = 566.0
-margin_right = 650.0
-margin_bottom = 65.0
+margin_left = 627.0
+margin_right = 711.0
+margin_bottom = 70.0
 text = "RUN REGEX"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 69.0
-margin_right = 650.0
-margin_bottom = 135.0
+margin_top = 114.0
+margin_right = 711.0
+margin_bottom = 184.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
-margin_left = 201.0
-margin_right = 295.0
-margin_bottom = 66.0
+margin_left = 231.0
+margin_right = 325.0
+margin_bottom = 70.0
 size_flags_horizontal = 5
 size_flags_vertical = 1
 text = "REGEX RESULT:"
@@ -73,12 +84,85 @@ align = 1
 valign = 1
 
 [node name="Result" type="Label" parent="VBoxContainer/HBoxContainer2"]
-margin_left = 299.0
-margin_right = 449.0
-margin_bottom = 66.0
+margin_left = 329.0
+margin_right = 479.0
+margin_bottom = 70.0
 rect_min_size = Vector2( 150, 0 )
 size_flags_vertical = 1
 align = 1
 valign = 1
 
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 199.0
+margin_right = 711.0
+margin_bottom = 213.0
+size_flags_horizontal = 5
+size_flags_vertical = 1
+text = "INTERACTIVE EMAIL TEST"
+align = 1
+valign = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 228.0
+margin_right = 711.0
+margin_bottom = 298.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit+" type="LineEdit" parent="VBoxContainer/HBoxContainer3"]
+margin_right = 711.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+"Use Regex" = true
+"Predefined pattern" = 5
+"Prevent typing" = false
+Pattern = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+margin_top = 313.0
+margin_right = 711.0
+margin_bottom = 327.0
+size_flags_horizontal = 5
+size_flags_vertical = 1
+text = "Only digit, prevent typing"
+align = 1
+valign = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 342.0
+margin_right = 711.0
+margin_bottom = 413.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit+" type="LineEdit" parent="VBoxContainer/HBoxContainer4"]
+margin_right = 711.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+"Use Regex" = true
+"Predefined pattern" = 1
+"Prevent typing" = true
+Pattern = "[0-9]+"
+
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Run" to="." method="_on_Run_pressed"]
+[connection signal="regex_result" from="VBoxContainer/HBoxContainer3/LineEdit+" to="." method="_on_LineEdit_regex_result"]
