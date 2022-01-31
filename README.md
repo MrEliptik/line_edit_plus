@@ -18,16 +18,23 @@ Premade Regex patterns or custom ones
   <img src="screenshots/node_config.gif">
 </p>
 
-Test using the email pattern
+
+Example using `run_regex()`, the `regex_result` signal and `prevent_typing` for digits only input
 <p align="center">
-  <img src="screenshots/test_email.gif">
+  <img src="screenshots/example.gif">
 </p>
 
 ## How to use
 
 Tick the `Use Regex` box and choose between a `predefined pattern` or enter your `custom Regex pattern`.
 
-The lineedit node will automatically remove the characters that are not fitting the pattern.
+- **Prevent typing**: The lineedit node will automatically remove the characters that are not fitting the pattern
+- If not using prevent typing, call `run_regex()` to validate the regex on the text of the lineEdit. Returns true if text match the regex
+
+You can also use the signal `regex_result(result, txt)` to get the result as the user is typing. 
+
+- result is `true` if the Regex matches the text, `fasle otherwise`
+- `txt` is the text that matches the Regex
 
 *For example: If you enter a Digits only Regex, all the non digits characters will be removed when the user types them.*
 
